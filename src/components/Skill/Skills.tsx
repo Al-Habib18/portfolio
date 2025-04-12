@@ -8,9 +8,9 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="bg-gradient-to-r from-[#1b1b1b] via-[#0f0f0f] to-[#212222] text-white py-20 px-4 md:px-12"
+            className="bg-gradient-to-r from-[#1b1b1b] via-[#0f0f0f] to-[#212222] text-white py-20 px-4 md:px-12 "
         >
-            <div className=" mx-auto">
+            <div className="max-w-screen-xl mx-auto">
                 <h2 className="text-3xl font-bold mb-4 text-white">
                     Tech Stack & Tools
                 </h2>

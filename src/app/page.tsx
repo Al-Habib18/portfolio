@@ -9,9 +9,10 @@ import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
     return (
-        <div className="">
+        <>
+            {" "}
+            <Navbar />
             <div>
-                <Navbar />
                 <Hero />
                 <About />
                 <Skills />
@@ -19,6 +20,6 @@ export default function Home() {
                 <Contact />
                 <Footer />
             </div>
-        </div>
+        </>
     );
 }
