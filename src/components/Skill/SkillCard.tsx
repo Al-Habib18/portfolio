@@ -9,15 +9,12 @@ type Props = {
 
 const SkillCard = ({ skill: { image, title } }: Props) => {
     return (
-        <div className="w-90 h-25 px-6 flex gap-2 lg:gap-4  mx-auto duration-400 transition-all cursor-pointer text-center rounded-lg bg-gray-800 hover:bg-gray-600  items-center justify-center">
-            <Image
-                src={image}
-                alt={title}
-                width={40}
-                height={40}
-                className="object-contain"
-            />
-            <p className="text-xl mt-4 text-white font-semibold">{title}</p>
+        <div
+            key={title}
+            className="flex flex-col items-center justify-center  bg-gradient-to-r from-gray-800 to-gray-900  backdrop-blur-sm p-4 rounded-xl shadow-md hover:scale-105 transition-transform duration-300"
+        >
+            <Image src={image} alt={title} width={40} height={40} />
+            <p className="mt-2 font-medium">{title}</p>
         </div>
     );
 };

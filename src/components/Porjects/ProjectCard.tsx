@@ -1,76 +1,69 @@
 /** @format */
 
 import Image from "next/image";
-import { FaGithub } from "react-icons/fa";
-import { VscActivateBreakpoints } from "react-icons/vsc";
+import Link from "next/link";
 
-type Props = {
+interface ProjectCardProps {
     id: number;
     image: string;
+    url: string;
     title: string;
     description: string;
     tech: string[];
     github: string;
     live: string;
-};
+}
 
-const ProjectCard = ({
+export default function ProjectCard({
     image,
     title,
     description,
     tech,
     github,
     live,
-}: Props) => {
+}: ProjectCardProps) {
     return (
-        <div className="bg-gray-900 max-w-md rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <Image
-                src={image}
-                alt={title}
-                width={400}
-                height={400}
-                className="object-cover w-full h-48 "
-            />
-            <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-2">
+        <div className="bg-[#111827] border border-[#1f2937] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300">
+            <div className="relative w-full h-48">
+                <Image src={image} alt={title} fill className="object-cover" />
+            </div>
+
+            <div className="p-5">
+                <h3 className="text-white text-lg font-semibold mb-2">
                     {title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-4">{description}</p>
+                <p className="text-gray-400 text-sm mb-4 line-clamp-3">
+                    {description}
+                </p>
+
                 <div className="flex flex-wrap gap-2 mb-4">
-                    {tech.map((t, idx) => (
+                    {tech.map((item, index) => (
                         <span
-                            key={idx}
-                            className="text-xs font-semibold px-2 py-1 bg-gray-700 rounded text-white"
+                            key={index}
+                            className="bg-[#1e293b] text-white text-xs px-2 py-1 rounded"
                         >
-                            {t}
+                            {item}
                         </span>
                     ))}
                 </div>
-                <div className="flex justify-between text-sm font-semibold">
-                    <div className="flex gap-1 justify-center items-center">
-                        <FaGithub />
-                        <a
-                            href={github}
-                            target="_blank"
-                            className="text-blue-400 hover:underline"
-                        >
-                            GitHub
-                        </a>
-                    </div>
-                    <div className="flex gap-1 justify-center items-center">
-                        <VscActivateBreakpoints />
-                        <a
-                            href={live}
-                            target="_blank"
-                            className="text-blue-400 hover:underline"
-                        >
-                            Live Demo
-                        </a>
-                    </div>
+
+                <div className="flex justify-between text-sm font-medium text-blue-400">
+                    <Link
+                        href={github}
+                        target="_blank"
+                        className="hover:underline"
+                    >
+                        GitHub
+                    </Link>
+                    <Link
+                        href={live}
+                        target="_blank"
+                        className="hover:underline"
+                    >
+                        Live Demo
+                    </Link>
                 </div>
             </div>
         </div>
     );
-};
-
-export default ProjectCard;
+}

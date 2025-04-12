@@ -15,19 +15,23 @@ const Hamburger = () => {
     };
 
     return (
-        <div className="md:hidden items-end text-left">
+        <div className="md:hidden ">
             {/* Hamburger Icon */}
             <button
                 onClick={toggleMenu}
-                className="text-white text-3xl hover:bg-gray-700 p-1.5 rounded-md duration-300 focus:outline-none"
+                className="text-white text-3xl hover:bg-gray-700 p-1 rounded-md duration-300 focus:outline-none"
             >
-                {isOpen ? <HiXMark /> : <GiHamburgerMenu />}
+                {isOpen ? (
+                    <HiXMark className="border border-white " />
+                ) : (
+                    <GiHamburgerMenu />
+                )}
             </button>
 
             {/* Dropdown Menu */}
             {isOpen && (
                 <ul
-                    className={`absolute top-16  bg-black rounded-lg shadow-md p-6 w-full h-screen z-auto right-0.5 space-y-4 text-white`}
+                    className={`absolute top-16 bg-black border-b-1 border-white rounded-lg shadow-md p-6 w-full right-0.5 space-y-4 text-white`}
                 >
                     {navLinks.map((link) => (
                         <Link
