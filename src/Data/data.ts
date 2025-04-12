@@ -8,7 +8,7 @@ export const BaseInfo = {
     profilePic: "/images/hero.jpeg",
     resume: "/resume.pdf",
     email: "alhabib607273@gmail.com",
-    phone: "+8801717-000000",
+    phone: "+8801717000000",
     github: "https://github.com/AlHabib-dev",
     linkedin: "https://linkedin.com/in/AlHabib-dev",
     x: "https://twitter.com/AlHabib_dev",
