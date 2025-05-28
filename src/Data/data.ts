@@ -7,12 +7,12 @@ export const BaseInfo = {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit porro numquam ad, vero consequuntur aperiam cumque voluptatum pariatur veniam? Qui facilis est ipsam odio cum!",
     profilePic: "/images/hero.jpeg",
     resume: "/resume.pdf",
+    phone: "+880 1522-140383",
     email: "alhabib607273@gmail.com",
-    phone: "+8801717000000",
-    github: "https://github.com/AlHabib-dev",
-    linkedin: "https://linkedin.com/in/AlHabib-dev",
-    x: "https://twitter.com/AlHabib_dev",
-    facebook: "https://facebook.com/AlHabib-dev",
+    github: "https://github.com/Al-Habib18",
+    linkedin: "https://www.linkedin.com/in/al-habib",
+    x: "https://x.com/al_habib_18",
+    facebook: "https://facebook.com/al.habib.607273",
     address: "Dhaka, Bangladesh",
 };
 
@@ -273,8 +273,8 @@ export const clientReviews = [
 ];
 
 export const contactData = {
-    phone: "+88(012345 789)",
-    email: "example@gmail.com",
+    phone: "+880 1522-140383",
+    email: "alhabib607273@gmail.com",
     address: "Dhaka , Bangladesh",
 };
 
